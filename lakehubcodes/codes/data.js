@@ -55,6 +55,7 @@ let restaurant = {
 this.guestCount=this.guestCount - partySize
     }
 }
+
 restaurant.seatParty(50)
 
 console.log("restarunt guest "+restaurant.guestCount)

@@ -9,35 +9,43 @@ const todos =[
     completed:true
 },
 {
-    text:'go to gym',
+    text:'my life as a shiling',
+    completed:false
+},
+{
+    text:'we hold the truths',
+    completed:false
+},
+{
+    text:'javscript is mine',
     completed:true
 },
 
 ]
 
 const renderTools=function(todosItem){
-
+         //getting out todos
     todosItem.forEach(function(todo){
         const p = document.createElement("p") //p is paragaraph
       p.textContent=todo.text;
-      document.getElementById("todos").appendChild(p)
+      document.getElementById("todos").appendChild(p) 
 
     })
 
-
-    const incompletedtodos= todosItem.filter(function(todo){
+         //getting the incomplete todos
+    const incompletedtodos = todosItem.filter(function(todo){
         return !todo.completed    
     })
     const summary=document.createElement("h2")
     summary.textContent=`you have ${incompletedtodos.length} todos left`
     document.getElementById("todos").appendChild(summary)
 
+    incompletedtodos.forEach(function(incompletetodo){
+    const p = document.createElement("p") //p is paragaraph
+    p.textContent=incompletetodo.text;
+    document.getElementById("todos").appendChild(p)
+    })
     
-
 };
-
 renderTools(todos)
 //https://eloquentjavascript.net/
-
-// const names=document.createElement("p")
-// names.textContent=`The incomplete todos are ${}`
