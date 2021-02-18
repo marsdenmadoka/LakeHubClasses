@@ -8,6 +8,7 @@ function baz() {
   var foo = "bam";
 }
 
-// baz();
+ //baz();
 
 console.log(foo);
+ 

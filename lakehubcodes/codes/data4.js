@@ -14,3 +14,4 @@ let getBookInfo = function (book) {
 let bookSummary = getBookInfo(myBook);
 
 console.log(bookSummary.pageCountInfo);
+console.log(bookSummary.summary);

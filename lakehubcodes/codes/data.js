@@ -48,18 +48,22 @@ let restaurant = {
         let seatsLeft=this.guestCapacity - this.guestCount
         return partySize <= seatsLeft
     },
+
     seatParty:function(partySize){
         this.guestCount = this.guestCount + partySize
     },
+
     removeParty:function(partySize){
-this.guestCount=this.guestCount - partySize
+    this.guestCount=this.guestCount - partySize
     }
 }
 
 restaurant.seatParty(50)
-
 console.log("restarunt guest "+restaurant.guestCount)
- restaurant.removeParty(2)
+
+restaurant.removeParty(2)
+console.log("restarunt guest "+restaurant.guestCount)
+
 console.log(restaurant.checkAvailablity(30));
 
 

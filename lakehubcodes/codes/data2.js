@@ -4,7 +4,7 @@
 // C**70-79
 // D**60-69
 // F**0-59
-
+ 
 function gradeCalculator(score, totalScore) {
   let percent = (score / totalScore) * 100;
   let letterGrade = "";
@@ -26,3 +26,9 @@ function gradeCalculator(score, totalScore) {
 
 let result = gradeCalculator(9, 20);
 console.log(result);
+ 
+let result1 = gradeCalculator(10, 40);
+console.log(result1);
+
+let result2 = gradeCalculator(50, 40);
+console.log(result2);

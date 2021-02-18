@@ -8,15 +8,14 @@ let myAccount = {
 let addExpense = function (account, amount) {
   account.expenses = account.expenses + amount;
 };
-
 addExpense(myAccount, 2000);
 
 console.log(myAccount);
 
+
 let addIncome = function (account, income) {
   account.income = account.income + income;
 };
-
 addIncome(myAccount, 11500);
 
 console.log(myAccount);
