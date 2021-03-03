@@ -9,8 +9,17 @@
   <body>
     <h1>Todos</h1>
     <input id="search-text" type="text" placeholder="filter todos" />
-    
-    <div id="todos"></div>
+    <label>
+      <input type="checkbox" id="hide-completed" /> Hide completed
+    </label>
+    <div id="todos"> 
+
+    </div>
+
+    <form id="newtodo">
+      <input type="text" placeholder="addtodo" name="text" autocomplete="off" />
+      <button>add todo</button>
+    </form>
     <script src="todo-app.js"></script>
   </body>
 </html>
