@@ -1,5 +1,3 @@
-
-
 let restaurant = {
   name: "livens",
   guestCapacity: 75,

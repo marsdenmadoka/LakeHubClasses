@@ -32,21 +32,31 @@ const renderTodos = function (todosItem, filterData) {
       .includes(filterData.searchText.toLowerCase());
   });
 
-  const inCompleteTodos = filteredTodos.filter(function (todo) {
-    return !todo.completed;
-  });
 
   document.getElementById("todos").innerHTML = "";
-
-  const summary = document.createElement("h2");
-  summary.textContent = `You have ${inCompleteTodos.length} todos left`;
-  document.getElementById("todos").appendChild(summary);
 
   filteredTodos.forEach(function (todo) {
     const p = document.createElement("p");
     p.textContent = todo.text;
     document.getElementById("todos").appendChild(p);
   });
+
+
+  //incomplete todos and displaying them
+  const inCompleteTodos = filteredTodos.filter(function (todo) {
+    return !todo.completed;
+  });
+
+  const summary = document.createElement("h2");
+  summary.textContent = `You have ${inCompleteTodos.length} todos left`;
+  document.getElementById("todos").appendChild(summary);
+
+  inCompleteTodos.forEach(function(incompletetodo){
+    const p = document.createElement("p") //p is paragaraph
+    p.textContent=incompletetodo.text;
+    document.getElementById("todos").appendChild(p)
+    })
+
 };
 
 renderTodos(todos, filters);
